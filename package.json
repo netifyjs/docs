@@ -1,0 +1,31 @@
+{
+  "name": "netify-docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#theme/*": "./.vitepress/theme/*"
+  },
+  "scripts": {
+    "dev": "bun run source && bun --bun vitepress dev",
+    "build": "bun run source && bun --bun vitepress build",
+    "preview": "bun --bun vitepress preview",
+    "source": "bun .vitepress/scripts/source/index.ts",
+    "format": "bun --bun prettier --write .",
+    "format:check": "bun --bun prettier --check ."
+  },
+  "devDependencies": {
+    "@shikijs/vitepress-twoslash": "2.5.0",
+    "@types/bun": "1.4.5",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "vitepress": "1.6.4",
+    "vue": "3.5.13",
+    "vue-tsc": "3.1.4"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "5.2.6",
+    "@fontsource-variable/geist-mono": "5.2.6",
+    "lucide-vue-next": "0.468.0"
+  }
+}

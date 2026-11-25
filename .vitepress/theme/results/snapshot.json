@@ -1,0 +1,228 @@
+{
+  "tcp": {
+    "echo": [
+      {
+        "name": "netify",
+        "runtime": "bun",
+        "value": 2484697.6
+      },
+      {
+        "name": "node:net",
+        "runtime": "bun",
+        "value": 2314252.8
+      },
+      {
+        "name": "Bun.listen",
+        "runtime": "bun",
+        "value": 2831820.8
+      },
+      {
+        "name": "NestJS",
+        "runtime": "bun",
+        "value": 106905.40000000001
+      },
+      {
+        "name": "gRPC",
+        "runtime": "bun",
+        "value": 129013.59999999999
+      },
+      {
+        "name": "Moleculer",
+        "runtime": "bun",
+        "value": 131692.6
+      },
+      {
+        "name": "ZeroMQ",
+        "runtime": "node",
+        "value": 145133.2
+      },
+      {
+        "name": "Netty",
+        "runtime": "java",
+        "value": 1574464
+      },
+      {
+        "name": "perfect-net",
+        "runtime": "bun",
+        "value": 522699.6
+      }
+    ],
+    "broadcast": []
+  },
+  "udp": {
+    "echo": [
+      {
+        "name": "Bun.udpSocket",
+        "runtime": "bun",
+        "value": 146268.4
+      },
+      {
+        "name": "node:dgram",
+        "runtime": "bun",
+        "value": 67702
+      },
+      {
+        "name": "netify",
+        "runtime": "bun",
+        "value": 154461.8
+      }
+    ],
+    "broadcast": []
+  },
+  "websocket": {
+    "echo": [
+      {
+        "name": "uWebSockets.js",
+        "runtime": "node",
+        "value": 1170608.4000000001
+      },
+      {
+        "name": "ws",
+        "runtime": "bun",
+        "value": 1197144
+      },
+      {
+        "name": "Socket.IO",
+        "runtime": "bun",
+        "value": 230099.2
+      },
+      {
+        "name": "Colyseus",
+        "runtime": "bun",
+        "value": 513324.80000000005
+      },
+      {
+        "name": "netify",
+        "runtime": "bun",
+        "value": 1217649.8
+      }
+    ],
+    "broadcast": [
+      {
+        "name": "uWebSockets.js",
+        "runtime": "node",
+        "value": 1690000
+      },
+      {
+        "name": "ws",
+        "runtime": "bun",
+        "value": 200000
+      },
+      {
+        "name": "Socket.IO",
+        "runtime": "bun",
+        "value": 100000
+      },
+      {
+        "name": "Colyseus",
+        "runtime": "bun",
+        "value": 190000
+      },
+      {
+        "name": "netify",
+        "runtime": "bun",
+        "value": 1830000
+      }
+    ]
+  },
+  "http": {
+    "echo": [
+      {
+        "name": "Bun.serve",
+        "runtime": "bun",
+        "value": 147547.2
+      },
+      {
+        "name": "node:http",
+        "runtime": "bun",
+        "value": 127340.80000000002
+      },
+      {
+        "name": "netify",
+        "runtime": "bun",
+        "value": 230640
+      }
+    ],
+    "broadcast": []
+  },
+  "tcpcores": {
+    "echo": [
+      {
+        "name": "netify",
+        "runtime": "bun",
+        "value": 7245177.6
+      },
+      {
+        "name": "node:net",
+        "runtime": "bun",
+        "value": 6703046.400000001
+      },
+      {
+        "name": "Bun.listen",
+        "runtime": "bun",
+        "value": 8743430.4
+      },
+      {
+        "name": "Netty",
+        "runtime": "java",
+        "value": 4573516.8
+      },
+      {
+        "name": "perfect-net",
+        "runtime": "bun",
+        "value": 1779932.7999999998
+      }
+    ],
+    "broadcast": []
+  },
+  "httpcores": {
+    "echo": [
+      {
+        "name": "Bun.serve",
+        "runtime": "bun",
+        "value": 500344
+      },
+      {
+        "name": "node:http",
+        "runtime": "bun",
+        "value": 294098.39999999997
+      },
+      {
+        "name": "netify",
+        "runtime": "bun",
+        "value": 819344
+      }
+    ],
+    "broadcast": []
+  },
+  "websocketcores": {
+    "echo": [
+      {
+        "name": "ws",
+        "runtime": "bun",
+        "value": 1589886.9999999998
+      },
+      {
+        "name": "uWebSockets.js",
+        "runtime": "node",
+        "value": 1598053.8
+      },
+      {
+        "name": "netify",
+        "runtime": "bun",
+        "value": 1703293.4
+      }
+    ],
+    "broadcast": []
+  },
+  "udpcores": {
+    "echo": [
+      {
+        "name": "netify",
+        "runtime": "bun",
+        "value": 745683.6000000001
+      }
+    ],
+    "broadcast": []
+  }
+}

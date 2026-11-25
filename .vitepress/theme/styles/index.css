@@ -1,0 +1,403 @@
+:root {
+  --nf-fg: #09090b;
+  --nf-fg-soft: #3f3f46;
+  --nf-muted: #71717a;
+  --nf-faint: #a1a1aa;
+  --nf-line: #ececef;
+  --nf-line-strong: #e4e4e7;
+  --nf-surface: #ffffff;
+  --nf-sunken: #f7f7f8;
+  --nf-sunken-strong: #f1f1f3;
+  --nf-bar: #e4e4e7;
+  --nf-shadow: 0 1px 2px rgb(9 9 11 / 0.04), 0 1px 1px rgb(9 9 11 / 0.03);
+
+  --vp-font-family-base:
+    'Geist Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+    sans-serif;
+  --vp-font-family-mono:
+    'Geist Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --vp-c-brand-1: var(--nf-fg);
+  --vp-c-brand-2: var(--nf-fg-soft);
+  --vp-c-brand-3: var(--nf-fg);
+  --vp-c-brand-soft: var(--nf-sunken-strong);
+
+  --vp-c-bg: var(--nf-surface);
+  --vp-c-bg-alt: var(--nf-surface);
+  --vp-c-bg-soft: var(--nf-sunken);
+  --vp-c-bg-elv: var(--nf-surface);
+  --vp-c-divider: var(--nf-line);
+  --vp-c-border: var(--nf-line-strong);
+  --vp-c-gutter: var(--nf-line);
+
+  --vp-c-text-1: var(--nf-fg);
+  --vp-c-text-2: #52525b;
+  --vp-c-text-3: var(--nf-faint);
+
+  --vp-code-block-bg: var(--nf-sunken);
+  --vp-code-tab-divider: var(--nf-line-strong);
+  --vp-code-copy-code-bg: var(--nf-surface);
+  --vp-code-copy-code-border-color: var(--nf-line-strong);
+  --vp-nav-bg-color: rgb(255 255 255 / 0.85);
+  --vp-sidebar-bg-color: var(--nf-surface);
+
+  --vp-button-brand-bg: var(--nf-fg);
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-hover-bg: #27272a;
+
+  --vp-custom-block-tip-bg: var(--nf-sunken);
+  --vp-custom-block-tip-border: var(--nf-line-strong);
+  --vp-custom-block-tip-text: var(--nf-fg-soft);
+  --vp-custom-block-tip-code-bg: var(--nf-sunken-strong);
+  --vp-custom-block-info-bg: var(--nf-sunken);
+  --vp-custom-block-info-border: var(--nf-line-strong);
+  --vp-custom-block-warning-bg: #fffbeb;
+  --vp-custom-block-warning-border: #fde68a;
+  --vp-custom-block-warning-text: #78350f;
+
+  --twoslash-border-color: var(--nf-line-strong);
+  --twoslash-popup-bg: var(--nf-surface);
+}
+
+.dark {
+  --nf-fg: #fafafa;
+  --nf-fg-soft: #d4d4d4;
+  --nf-muted: #a3a3a3;
+  --nf-faint: #737373;
+  --nf-line: #1a1a1a;
+  --nf-line-strong: #262626;
+  --nf-surface: #000000;
+  --nf-sunken: #0a0a0a;
+  --nf-sunken-strong: #141414;
+  --nf-bar: #2b2b2b;
+  --nf-shadow: none;
+
+  --vp-c-text-2: #a3a3a3;
+  --vp-c-bg-alt: #000000;
+  --vp-nav-bg-color: rgb(0 0 0 / 0.8);
+  --vp-code-block-bg: #0a0a0a;
+  --vp-button-brand-text: #000000;
+  --vp-button-brand-hover-bg: #e5e5e5;
+  --vp-custom-block-warning-bg: #0a0a0a;
+  --vp-custom-block-warning-border: #3a2f12;
+  --vp-custom-block-warning-text: #e5e5e5;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'ss01';
+}
+
+.VPNav {
+  backdrop-filter: saturate(1.4) blur(12px);
+}
+
+.VPNavBar {
+  border-bottom: 1px solid var(--nf-line);
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.VPNavBar.top:not(.has-sidebar) {
+  border-bottom-color: transparent;
+}
+
+.VPNavBar.top:not(.has-sidebar) .content-body {
+  background: transparent !important;
+}
+
+.VPNavBar.top:not(.has-sidebar) .divider-line,
+.VPNavBar.top:not(.has-sidebar) .divider {
+  background-color: transparent !important;
+}
+
+.VPNavBar:not(.has-sidebar) .wrapper {
+  padding: 0 clamp(24px, 5vw, 72px) !important;
+}
+
+.VPNavBar:not(.has-sidebar) .container {
+  max-width: 1456px !important;
+}
+
+.VPNavBarMenu {
+  gap: 4px;
+}
+
+.VPNavBarMenuLink {
+  padding: 0 10px !important;
+}
+
+.VPNavBarSocialLinks,
+.VPNavBarAppearance {
+  margin-left: 4px;
+}
+
+.VPNavBarExtra + .VPNavBarSocialLinks::before,
+.VPNavBarMenu + .VPNavBarTranslations::before,
+.VPNavBarAppearance::before,
+.VPNavBarSocialLinks::before {
+  display: none !important;
+}
+
+.VPNavBar .divider-line,
+.VPNavBar.has-sidebar .divider-line {
+  background-color: var(--nf-line) !important;
+}
+
+.VPNavBarTitle .title {
+  gap: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.VPNavBarTitle .logo {
+  height: 22px;
+  margin-right: 8px;
+}
+
+.VPNavBarMenuLink {
+  color: var(--nf-muted) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuLink.active {
+  color: var(--nf-fg) !important;
+}
+
+.DocSearch-Button {
+  height: 34px !important;
+  padding: 0 8px 0 12px !important;
+  border: 1px solid var(--nf-line-strong) !important;
+  border-radius: 8px !important;
+  background: var(--nf-sunken) !important;
+  color: var(--nf-muted) !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s;
+}
+
+.DocSearch-Button:hover {
+  border-color: var(--nf-faint) !important;
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: 13px !important;
+}
+
+.DocSearch-Button-Keys {
+  opacity: 0.6;
+}
+
+.VPHome {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.VPSidebar {
+  border-right: 1px solid var(--nf-line);
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  color: var(--nf-faint) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.VPSidebarItem.level-1 .link .text {
+  color: var(--nf-fg-soft);
+  font-size: 14px;
+}
+
+.VPSidebarItem.level-1 .item {
+  padding-left: 0;
+}
+
+.VPSidebarItem.level-1 .link {
+  margin-left: -10px;
+  padding-left: 10px;
+  border-radius: 6px;
+}
+
+.VPSidebarItem.level-1 .link:hover {
+  background: var(--nf-sunken);
+}
+
+.VPSidebarItem.is-active > .item > .link {
+  background: var(--nf-sunken-strong);
+}
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--nf-fg) !important;
+  font-weight: 500;
+}
+
+.VPSidebarItem .indicator {
+  display: none !important;
+}
+
+.VPDocAsideOutline {
+  display: none !important;
+}
+
+.vp-doc h1 {
+  margin-bottom: 14px;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.vp-doc h1 + p {
+  margin-bottom: 32px;
+  color: var(--vp-c-text-2);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.vp-doc h2 {
+  margin-top: 56px;
+  padding-top: 0;
+  border-top: 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.vp-doc h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.vp-doc p,
+.vp-doc li {
+  color: var(--nf-fg-soft);
+  line-height: 1.75;
+}
+
+.vp-doc a {
+  color: var(--nf-fg);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--nf-line-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s;
+}
+
+.vp-doc a:hover {
+  text-decoration-color: var(--nf-fg);
+}
+
+.vp-doc .header-anchor {
+  text-decoration: none;
+}
+
+.vp-doc :not(pre) > code {
+  padding: 2px 5px;
+  border: 1px solid var(--nf-line);
+  border-radius: 5px;
+  background: var(--nf-sunken);
+  color: var(--nf-fg);
+  font-size: 0.86em;
+}
+
+.vp-doc div[class*='language-'],
+.vp-doc .vp-code-group .tabs {
+  border: 1px solid var(--nf-line);
+  border-radius: 10px;
+}
+
+.vp-doc div[class*='language-'] {
+  box-shadow: var(--nf-shadow);
+}
+
+.vp-doc .vp-code-group .tabs {
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background: var(--nf-sunken);
+}
+
+.vp-doc .vp-code-group div[class*='language-'] {
+  border-radius: 0 0 10px 10px;
+}
+
+.vp-doc div[class*='language-'] > span.lang {
+  color: var(--nf-faint);
+  font-size: 11px;
+}
+
+.vp-doc .custom-block {
+  border-radius: 10px;
+}
+
+.vp-doc .custom-block .custom-block-title {
+  font-weight: 600;
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--nf-line);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.vp-doc tr {
+  border-top: 0;
+  background: transparent !important;
+}
+
+.vp-doc th,
+.vp-doc td {
+  padding: 10px 14px;
+  border: 0;
+  border-top: 1px solid var(--nf-line);
+}
+
+.vp-doc tr:first-child th {
+  border-top: 0;
+}
+
+.vp-doc th {
+  background: var(--nf-sunken);
+  color: var(--nf-muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.vp-doc td code {
+  white-space: nowrap;
+}
+
+.VPDocFooter .pager-link {
+  border: 1px solid var(--nf-line-strong) !important;
+  border-radius: 10px !important;
+  box-shadow: var(--nf-shadow);
+}
+
+.VPDocFooter .pager-link:hover {
+  border-color: var(--nf-faint) !important;
+}
+
+.VPDocFooter .title {
+  color: var(--nf-fg) !important;
+  font-weight: 500 !important;
+}
+
+.VPDocFooter .edit-link-button,
+.VPLastUpdated {
+  color: var(--nf-muted) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+.VPFooter {
+  border-top: 1px solid var(--nf-line) !important;
+}
